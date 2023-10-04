@@ -16,7 +16,7 @@ export default function Weather() {
                 />
               </div>
               <div className="col-3 p-0">
-                <input type="submit" className="btn btn-primary w-200" value="Search" />
+                <input type="submit" className="btn btn-primary w-100" value="Search" />
               </div>
             </div>
           </div>
@@ -40,29 +40,12 @@ export default function Weather() {
         <div className="humidity" id="humidity"></div>
         <div className="windSpeed" id="windSpeed"></div>
       </div>
-      <div className="weather-forecast" id="weather-forecast">
-        <div className="row">
-          <div className="col-3">
-            <div className="weather-forecast-date">Thur</div>
-            <div className="weather-icon">
-              <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="weather" width="200" height="100" />
-            </div>
-            
-            <div className="weather-forecast-temperatures">
-              <span className="weather-forecast-temperature-max">
-                18°
-              </span>
-              /
-              <span className="weather-forecast-temperatue-min">12° </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script src="src/app.js"></script>
+      
+     
 
       <footer>This project was coded by <a href="https://github.com/lydi-in-tech">Lydia Pelesane</a> and is <a href="https://github.com/lydi-in-tech/react-week4-homework" target="_blank" title="GitHub weather app project" rel="noreferrer">open-sourced on GitHub</a> and <a href="https://shecodes-weather.netlify.app/" target="_blank" rel="noreferrer" title="weather app project on netlify website">hosted on Netlify</a></footer>
       </div>
 
-    )
-
+   
+  );
 }
