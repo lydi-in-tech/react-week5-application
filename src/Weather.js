@@ -1,4 +1,5 @@
 import React from "react" 
+import "./App.css"
 
 export default function Weather() {
     return (
@@ -16,7 +17,7 @@ export default function Weather() {
                 />
               </div>
               <div className="col-3 p-0">
-                <input type="submit" className="btn btn-primary w-100" value="Search" />
+                <input type="submit" className="btn primary-btn" value="Search" />
               </div>
             </div>
           </div>
