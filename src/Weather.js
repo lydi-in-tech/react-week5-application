@@ -8,13 +8,14 @@ export default function Weather(props) {
     function handleResponse(response) {
         console.log(response.data.condition)
         setWeatherData({
+            ready: true,
             city: response.data.city,
         description: response.data.condition.description,
         humidity: response.data.temperature.humidity,
         wind: response.data.wind.speed,
             temperature: response.data.temperature.current,
             date: new Date(response.data.time * 1000),
-     icon: response.data.condition.icon_url
+     icon: "http://openweathermap.org/img/wn/50d@2x.png"
 
         })
         
@@ -57,9 +58,31 @@ let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiK
               </div>
             </div>
           </div>
-        </form>
-                </div>
-                )
+                </form>
+                <div className="icon" ><img src={weatherData.icon} width="200" height="200" alt="clear" id="icon" />
+                    <div className="temp" id="temp">{Math.round(weatherData.temperature )}</div>
+        <span id="celcius" className="celcius">
+          <strong id="temperature"></strong>
+          <a href="/#" id="celsius-link">°C</a>|<a href="/#" id="fahrenheit-link">°F</a> 
+        </span>
+      </div>
+      <h1>
+                    <div id="city" className="city">{weatherData.city }</div>
+      </h1>
+      <div className="time" id="time">15:00 Friday</div>
+     
+      <div className="info">
+                    <div className="description text-capitalize" id="description">{ weatherData.description}</div>
+                    <div className="humidity" id="humidity">Humidity: { weatherData.humidity}%</div>
+                    <div className="windSpeed" id="windSpeed">WindSpeed: {weatherData.wind} km/h</div>
+      </div>
+
+      </div>
+
+   
+  );
+                
+                
         
     } else {
          search()
