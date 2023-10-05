@@ -1,4 +1,5 @@
-import React, { useState  } from "react" 
+import React, { useState } from "react" 
+import FormattedDate from "./FormattedDate";
 import axios from "axios"
 import "./App.css"
 
@@ -69,7 +70,9 @@ let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiK
       <h1>
                     <div id="city" className="city">{weatherData.city }</div>
       </h1>
-      <div className="time" id="time">15:00 Friday</div>
+                <div className="time" id="time">
+                    <FormattedDate date={weatherData.date} />
+                </div>
      
       <div className="info">
                     <div className="description text-capitalize" id="description">{ weatherData.description}</div>
